@@ -1,0 +1,623 @@
+body{
+    /* border: 2px solid blue; */
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* background-image: url('../img/oceano2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+#boleto{
+    border: 2px solid #295675;
+    border-radius: 10%;
+    height: 85%;
+    width: 35%;
+    left: 4%;
+    top: 4%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f0eb;
+    position: absolute;
+    box-shadow: 1px 5px 32px rgba(0, 0, 100, 0.3);
+    z-index: 10;
+    overflow: hidden;
+}
+
+#boletoTitulo{
+    width: 100%;
+    height: 17%;
+    border-bottom: 2px solid #295675;
+}
+
+#boletoRuta{
+    width: 100%;
+    height: 28%;
+    display: flex;
+    flex-direction: column;
+}
+
+#boletoInfo{
+    width: 100%;
+    height: 25%;
+    border: 2px solid #295675;
+    border-left: none;
+    border-right: none;
+}
+
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #295675;
+}
+
+h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #295675;
+    text-align: center;
+}
+
+#boletoBoton{
+    width: 100%;
+    height: 10%;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botonCompra{
+    width: 50%;
+    height: 90%;
+    background-color: #2c9acb;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #f2f0eb;
+    border-radius: 10px;
+    border: none;
+    z-index: 11;
+    margin-top: 16%;
+}
+
+#boletoDecoracion{
+    width: 100%;
+    height: 20%;
+}
+
+.nubesDecoracion{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+    filter: hue-rotate(355deg);
+}
+
+#logo{
+    width: 25%;
+    position: absolute;
+    right: -1%;
+    top: -2%;
+    opacity: 0.5;
+}
+#premium{
+    /* border: 2px solid green; */
+    background-color: #ffc44652;
+    height: 13%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+        /* gap: 10px 12px; */
+        grid-auto-flow: row;
+        grid-template-areas:
+        ". . . . ."
+        ". . . . ."
+        ". . . . ."
+        ". . . . .";
+    align-items: center;
+    justify-items: center;
+    margin-top: 10%;
+
+}
+#ejecutiva{
+    /* border: 2px solid blue; */
+    background-color: #5f9dc74d;
+    height: 30%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /* gap: 4px 0px; */
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . .";
+    align-items: center;
+    justify-items: center;
+    /* animation: asientosCrecerE 4s cubic-bezier(0.3, 0, 0.7, 1); */
+}  
+
+/* @keyframes asientosCrecerE {
+    from {
+        width: 25.3%;
+        height: 9.5%;
+    }
+    to {
+        width: 100%;
+        height: 30%;
+    }
+} */
+#pobres{
+    /* border: 2px solid yellow; */
+    height: 57%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    gap: 12px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . ."
+        ". . . . . . .";
+    align-items: center;
+    justify-items: center;
+    background-color: #51d76073;
+}
+
+.asientoPeque {
+    /* border: 2px solid red; */
+    font-size: 0.6em; /* cambiar a 2em */
+    color: #295675;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: asientosDisminuir 2.5s cubic-bezier(0.3, 0, 0.7, 1);
+}  
+
+.asientoJumbo {
+    /* border: 2px solid red; */
+    font-size: 2em; /* cambiar a 2em */
+    color: #295675;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: asientosCrecer 2.5s cubic-bezier(0.3, 0, 0.7, 1);
+}  
+@keyframes asientosDisminuir {
+    from {
+        font-size: 2em;
+    }
+    to {
+        font-size: 0.6em;
+    }
+}
+
+@keyframes asientosCrecer {
+    from {
+        font-size: 0.6em;
+    }
+    to {
+        font-size: 2em;
+    }
+}
+
+.material-symbols-outlined{
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-size: 1.3em;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    color: #295675;
+    font-weight: bold;
+}  
+
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 13px; /* Ancho de la barra de desplazamiento */
+}
+/* Estilo para el pulgar de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: #295675; /* Color del pulgar */
+    border-radius: 6px; /* Borde redondeado del pulgar */
+    border: 3px solid #ffffff; /* Borde blanco alrededor del pulgar */
+}
+/* Estilo para el fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color del fondo de la barra de desplazamiento */
+    border-radius: 10px; /* Borde redondeado del fondo */
+} 
+/* Cambiar el color del pulgar cuando está en hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2c3e50; /* Color del pulgar al pasar el ratón sobre él */
+}
+
+
+.avionNormal{
+    /* border: 2px solid pink; */
+    display: flex;
+    animation: avionLlegando 2.5s cubic-bezier(0.3, 0, 0.7, 1);
+    position: absolute;
+    height: 103%;
+    width: 58%;
+    bottom: 0%;
+    left: 30%;
+    z-index: 5;
+}
+
+@keyframes avionLlegando{
+    from {
+        /* height: 103%;
+        width: 58%;
+        bottom: 0%;
+        left: 30%; */
+        height: 450%;
+        bottom: -305%;
+        width: 200%;
+        left: -40%;
+
+    }
+    to {
+        /* height: 450%;
+        bottom: -305%;
+        width: 200%;
+        left: -40%; */
+        height: 103%;
+        width: 58%;
+        bottom: 0%;
+        left: 30%;
+    }
+}
+
+.avionCreciendo{
+        /* border: 2px solid pink; */
+        display: flex;
+        animation: avionAumento 2.5s cubic-bezier(0.3, 0, 0.7, 1);
+        position: absolute;
+        height: 450%;
+        bottom: -305%;
+        width: 200%;
+        left: -40%;
+        z-index: 5;
+}
+
+@keyframes avionAumento{
+    from {
+        height: 103%;
+        width: 58%;
+        bottom: 0%;
+        left: 30%;
+
+    }
+    to {
+        height: 450%;
+        bottom: -305%;
+        width: 200%;
+        left: -40%;
+    }
+}
+
+@keyframes mostrandoClaseAB {
+    from {bottom: -305%;}
+    to {bottom: -256%;}    
+}
+@keyframes mostrandoClaseAC {
+    from {bottom:-305% ;}
+    to {bottom: -155%;}    
+}
+@keyframes mostrandoClaseBA {
+    from {bottom: -256%;}
+    to {bottom: -305%;}    
+}
+@keyframes mostrandoClaseBC {
+    from {bottom: -256%;}
+    to {bottom: -155%;}    
+}
+@keyframes mostrandoClaseCA {
+    from {bottom: -155%;}
+    to {bottom: -305%;}    
+}
+@keyframes mostrandoClaseCB {
+    from {bottom: -155%;}
+    to {bottom: -256%;}    
+}
+
+.avionPorClases{
+    /* border: 2px solid pink; */
+    display: flex;
+    /* animation: avionAumento 4s cubic-bezier(0.3, 0, 0.7, 1); */
+    position: absolute;
+    height: 450%;
+    bottom: -305%;
+    width: 200%;
+    left: -40%;
+    z-index: 5;
+}
+
+#diseñoIzquierda{
+    height: 100%;
+    width: 43.5%;
+    /* border: 2px solid #5196a6; */
+    display: flex;
+    flex-direction: column;
+}
+
+#diseñoCentro{
+    height: 100%;
+    width: 10%;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#centroCabeza{
+    /* border: 2px solid green; */
+    width: 101%;
+    height: 10%;
+    clip-path: ellipse(72% 289% at 50% 289%);
+    background-color: #2c9acb;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#relleno{
+    position: relative;
+    background-color: #f2f0eb;
+    height: 40%;
+    width: 100%;
+    clip-path: ellipse(61% 224% at 50% 229%);
+    margin-bottom: -1px;
+}
+
+#centroCuerpo{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 77%;
+    /* border-left: 1px solid #295675;
+    border-right: 1px solid #295675; */
+    background-color: #f2f0eb;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+#centroCola{
+    /* border: 2px solid green; */
+    width: 100%;
+    height: 13%;
+    clip-path: ellipse(85% 100% at 50% 0%);
+    background-color: #2c9acb;
+}
+
+#diseñoDerecha{
+    height: 100%;
+    width: 43.5%;
+    /* border: 2px solid #295675; */
+    display: flex;
+    flex-direction: column;
+}
+
+.lateral {
+    /* border: 2px solid orange; */
+    height: 29%;
+    width: 100%;
+}
+
+#aleta1 {
+    width: 100%;
+    clip-path: polygon(100% 0%, 100% 60%, -20% 100%);
+    background-color: #2c9acb;
+}
+
+#sombra1{
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(98% -9%, 163% 63%, 88% 121%);
+    background-color: #295675;
+    position: relative;
+}
+
+#sombra2{
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% -100%, 157% 63%, 93% 121%);
+    background-color: #295675;
+}
+
+/* #estampado{
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(-19% 0%, 218% 14%, 131% 114%);
+    background-color: #d10816
+}
+#estampado2{
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(145% -18%, -132% -4%, -32% 115%);
+    background-color: #d10816;
+    position: relative;
+    top: -100%;
+} */
+
+
+
+#aleta2{
+    width: 100%;
+    clip-path: polygon(0% 0%, 0% 60%, 120% 100%);
+    background-color: #2c9acb;
+
+}
+#colaLateral,#colaLateral2{
+    /* border: 2px solid blue; */
+    height: 13%;
+    width: 100%;
+    display: flex;
+}
+
+#colaLateral{
+    width: 100%;
+    clip-path: polygon(100% 0%, 100% 65%, 40% 130%);
+    background-color: #2c9acb;
+}
+
+#colaLateral2{
+    width: 100%;
+    clip-path: polygon(0% 0%, 0% 65%, 60% 130%);
+    background-color: #2c9acb;
+}
+
+#navidad{
+    position: absolute;
+    right: 20%;
+    width: 100px;
+    bottom: 100%;
+    animation: santa 15s;
+    animation-delay: 10s;
+    z-index: 0;
+}
+
+@keyframes santa{
+    from {
+        bottom: 100%;
+    }
+    to {
+        bottom: -100%;
+    }
+}
+
+.nubes{
+    position: absolute;
+    width: 11%;
+    height: 20%;
+    right: 30%;
+    top: -40%;
+    animation: nubes 4s ease-in infinite;
+    animation-delay: 3s;
+    z-index: 1;
+}
+
+
+#nubes2{
+    width: 15%;
+    height: 30%;
+    right: 60%;
+    animation-delay: 6s;
+}
+
+#nubes3{
+    width: 11%;
+    height: 20%;
+    right: 80%;
+    animation-delay: 4.5s;
+} 
+
+#nubes4{
+    width: 11%;
+    height: 20%;
+    right: 10%;
+    animation-delay: 4.6s;
+} 
+
+.nubeMain{
+    position: absolute;
+    width: 90%;
+    height: 87%;
+    background-color: #cedfef96;
+    display: flex;
+    border-radius: 30% 28% 27% 21%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+@keyframes nubes{
+    from {
+        top: -40%;
+    }
+    to {
+
+        top: 100%;
+    }
+}
+
+#nubeMini{
+    position: absolute;
+    width: 12%;
+    height: 25%;
+    border-radius: 30% 28% 27% 21%;
+}
+
+#avionNav{
+    position: absolute;
+    width: 17%;
+    height: 25%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    bottom: 11%;
+    right: 6%;
+}
+
+.claseNav{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    background-color: #f2f0eb;
+    border-radius: 6px;
+
+}
+
+.colorcito{
+    width: 9%;
+    height: 30%;
+}
+
+.clasismo{
+    width: 80%;
+}
+
+#acercar{
+    position: absolute;
+    width: 17%;
+    height: 5%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    bottom: 70%;
+    right: 6%;
+    /* border: 2px solid red; */
+    background-color: #f2f0eb;
+    z-index: 10;
+}
